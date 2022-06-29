@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 
 # config file with twitter developer credentials
-config.ini
+.env
+
+# output files
+output/
