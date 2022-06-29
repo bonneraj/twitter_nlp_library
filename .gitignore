@@ -130,3 +130,6 @@ dmypy.json
 
 # config file with twitter developer credentials
 .env
+
+# output files
+output/
