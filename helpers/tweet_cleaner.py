@@ -1,5 +1,5 @@
 import re
-from helpers.tweets_json_functions import list_to_json, list_from_json
+from helpers.json_utils import list_to_json, list_from_json
 
 class TweetCleaner:
 

@@ -10,3 +10,6 @@ pip install tweepy
 pip install textblob
 python -m textblob.download_corpora
 pip install nltk
+pip install seaborn
+pip install pandas
+pip install tabulate

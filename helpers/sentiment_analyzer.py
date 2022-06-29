@@ -2,7 +2,7 @@ import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 from statistics import mean, median
 nltk.download('vader_lexicon')
-from helpers.tweets_json_functions import list_from_json, list_to_json
+from helpers.json_utils import list_from_json, list_to_json
 
 
 class SentimentAnalyzer:
