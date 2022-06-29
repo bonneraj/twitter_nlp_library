@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 import json
 import tweepy as tw
-from helpers.tweets_json_functions import list_to_json,api_response_to_list
+from helpers.json_utils import list_to_json,api_response_to_list
 
 class GetTweets:
     def __init__(self, BEARER_TOKEN):
