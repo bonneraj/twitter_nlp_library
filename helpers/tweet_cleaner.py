@@ -8,8 +8,9 @@ class TweetCleaner:
         raw_tweets_list = list_from_json(raw_output_path)
         # clean tweets
         cleaned_tweets_list = self._clean_tweets(raw_tweets_list)
+        unique_cleaned_tweets = self._remove_duplicate_tweets(cleaned_tweets_list)
         # save list as json
-        list_to_json(cleaned_output_path, cleaned_tweets_list)
+        list_to_json(cleaned_output_path, unique_cleaned_tweets)
     
     def _clean_tweets(self, tweet_list):
         # remove non alpha-numeric characters
@@ -19,3 +20,8 @@ class TweetCleaner:
             tweet = re.sub(' +', ' ', tweet)
             cleaned_tweets.append(tweet)
         return cleaned_tweets
+
+    def _remove_duplicate_tweets(self, tweet_list):
+        unique_tweets = set(tweet_list)
+        unique_tweet_list = list(unique_tweets)
+        return unique_tweet_list

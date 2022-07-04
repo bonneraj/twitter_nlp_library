@@ -46,7 +46,7 @@ class ConfigParser():
         # validations for config.ini
         if keyword == '':
             print('WARNING: config.ini is missing a keyword value for Query 2, the script will only be run for Query 1')
-            return None
+            return (None, None)
         else:
             query = (keyword + ' ' + language)
             return (keyword, query)
