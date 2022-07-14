@@ -1,4 +1,3 @@
-from sys import argv
 import os
 import re
 from pathlib import Path
@@ -8,10 +7,6 @@ from helpers.sentiment_analyzer import SentimentAnalyzer
 from helpers.tweet_cleaner import TweetCleaner
 from helpers.sentiment_visualizer import SentimentVisualizer
 from helpers.config_parser import ConfigParser
-
-# assign arguments passed through the command line (bash)
-    # query = argv[1]
-    # max_results = argv[2]
 
 def get_tweet_params(config_file_path):
     # ADD - ability to run multiple queries - have this function return an array of queries and max_results 
@@ -71,17 +66,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# ORIGINAL BEFORE REFACTORING
-# def main():
-#     config_file_path = 'config.ini'
-#     tweet_output_file_path = 'output/raw_tweets.json'
-#     cleaned_tweet_output_file_path = 'output/clean_tweets.json'
-#     sentiment_summary_file_path = 'output/sentiment_summary.json'
-    
-#     get_tweet_params(config_file_path)
-#     collect_tweets(tweet_output_file_path)
-#     clean_tweets(tweet_output_file_path, cleaned_tweet_output_file_path)
-#     get_tweet_sentiment(cleaned_tweet_output_file_path, sentiment_summary_file_path)
-#     visualize_tweet_sentiment(sentiment_summary_file_path)
