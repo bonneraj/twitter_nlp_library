@@ -5,7 +5,8 @@ from helpers.dataframe_utils import get_df_from_json
 
 class SentimentVisualizer:
 
-    def plot_standalone_bar_graph(self, sentiment_output_path, keyword):
+    def plot_standalone_bar_graph(self, sentiment_output_path: str, keyword: str) -> plt:
+        '''Plots and saves summary of descriptive statistics for given query'''
         # read cleaned tweets json
         sentiment_output_df = get_df_from_json(sentiment_output_path)
         # plot bar plot
@@ -20,4 +21,5 @@ class SentimentVisualizer:
         return plt
 
     def _customize_plot_settings(self):
+        '''Customizes plot of descriptive statistics'''
         sns.set_theme(style="whitegrid")       
