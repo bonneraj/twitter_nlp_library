@@ -1,4 +1,4 @@
-# Twitter Sentiment Analysis
+# Twitter NLP Library
 
 ## Project Overview: 
 This project utilizes the Twitter API to search tweets based on user-provided criteria with the option to run various Natural Language Processing (NLP) scripts against. The search query is limited to tweets from the past seven days, based on developer account permitted use. The following NLP capabilities currently exist in this repository:
