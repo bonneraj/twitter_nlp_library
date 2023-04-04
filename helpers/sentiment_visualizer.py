@@ -15,7 +15,7 @@ class SentimentVisualizer:
         ax.set(title=f'Tweet Keyword: {keyword}')
         plt.plot()
         
-        # save figure as pdf for future reference
+        # save figure as png for future reference
         plt.savefig(sentiment_output_path.replace(".json", ".png"))
         plt.show()
         return plt

@@ -10,7 +10,6 @@ from helpers.config_parser import ConfigParser
 from helpers.logger import logger
 
 def get_tweet_params(config_file_path: str):
-    # ADD - ability to run multiple queries - have this function return an array of queries and max_results that can be passed to main()
     parser = ConfigParser()
     query_list, max_results = parser.run_get_tweet_params_workflow(config_file_path)
     
