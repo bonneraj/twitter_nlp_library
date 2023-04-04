@@ -20,6 +20,7 @@ pip install wordcloud
 pip install matplotlib
 
 # print options
-echo ' -RUN TEST QUERY: python main.py'
-echo ' - TEST: python -m pytest'
-echo ' - COVERAGE: python -m pytest --cov=src'
+echo ' -RUN SENTIMENT ANALYSIS: python analyze_sentiment.py'
+echo ' -CREATE WORD CLOUD: python create_word_cloud.py'
+echo ' -TEST: python -m pytest'
+echo ' -COVERAGE: python -m pytest --cov=helpers'

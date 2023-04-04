@@ -15,13 +15,13 @@ class TweetCleaner:
         list_to_json(cleaned_output_path, unique_cleaned_tweets)
     
     def _clean_tweets(self, tweet_list: List) -> List:
-        '''Cleans tweets by stripping extraneous characters'''
+        '''Cleans tweets by stripping extraneous characters and removing capital letters'''
         # remove non alpha-numeric characters
         cleaned_tweets = []
         for tweet in tweet_list:
             tweet = re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", "", tweet)
             tweet = re.sub(' +', ' ', tweet)
-            cleaned_tweets.append(tweet)
+            cleaned_tweets.append(tweet.lower())
         return cleaned_tweets
 
     def _remove_duplicate_tweets(self, tweet_list: List) -> List:
