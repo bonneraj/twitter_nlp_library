@@ -15,10 +15,11 @@ class TweetCleaner:
         list_to_json(cleaned_output_path, unique_cleaned_tweets)
     
     def _clean_tweets(self, tweet_list: List) -> List:
-        '''Cleans tweets by stripping extraneous characters and removing capital letters'''
+        '''Cleans tweets by stripping extraneous characters and removing capital letters and words with less than 3 characters.'''
         # remove non alpha-numeric characters
         cleaned_tweets = []
         for tweet in tweet_list:
+            tweet = re.sub(r'\b\w{1,3}\b', '', tweet)
             tweet = re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", "", tweet)
             tweet = re.sub(' +', ' ', tweet)
             cleaned_tweets.append(tweet.lower())
